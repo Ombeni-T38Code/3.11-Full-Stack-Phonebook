@@ -1,0 +1,15 @@
+POST http://localhost:3010/api/persons
+Content-Type: application/json
+
+{
+  "name": "ombeni Doe",
+  "number": "123456789"
+}
+
+###
+GET http://localhost:3010/api/persons
+Accept: application/json
+
+###
+DELETE http://localhost:3010/api/persons/101557
+Content-Type: application/json

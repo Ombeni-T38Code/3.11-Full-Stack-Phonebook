@@ -2,12 +2,15 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 
+// app.use(express.static('dist'))
 
 const app = express()
 
 app.use(cors())
 // Middleware
 app.use(express.json())
+
+app.use(express.static('dist'))
 
 app.use(morgan('tiny'))
 
@@ -41,6 +44,11 @@ let persons = [
     id: "4",
     name: "Mary Poppendieck",
     number: "39-23-6423122"
+  },
+  {
+    id: "5",
+    name: "John Doe",
+    number: "123-4567890"
   }
 ]
 
